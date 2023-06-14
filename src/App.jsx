@@ -1,9 +1,12 @@
-import React from "react";
+import PageLayout from "components/PageLayout";
+import "styles/style.css";
 
-function App() {
+const App = () => {
   return (
-    <div>
-    </div>
+    <>
+      <PageLayout></PageLayout>
+      <footer><p>React 개인과제(2023. 06) | 내일배움캠프 React 6기</p></footer>
+    </>
   );
 }
 
