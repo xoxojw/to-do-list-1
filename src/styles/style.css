@@ -1,0 +1,93 @@
+@import "reset.css";
+@import "variable.css";
+@import "fonts.css";
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--main-bg-color);
+  color: var(--main-ft-color);
+  font-family: -apple-system, 'Pretendard-Regular', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+main {
+  max-width: 120vh;
+  min-width: 80vh;
+  min-height: 60vh;
+
+  border-radius: 30px;
+  background-color: rgba(166, 182, 194, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.2);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid salmon;
+
+  padding: 2vh 3vh;
+}
+
+.header-title {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.add-todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vh;
+  gap: 5px;
+}
+
+.add-todo input {
+  width: 20vh;
+  height: 3vh;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'Pretendard-Regular';
+}
+
+.add-todo button {
+  width: 7vh;
+  height: 3.2vh;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  margin-left: 1vh;
+  background-color: palevioletred;
+  font-family: 'Pretendard-Regular';
+  transition: all 0.2s ease-in-out;
+}
+
+.add-todo button:hover {
+  scale: 1.1;
+}
+
+.list-title {
+  display: block;
+  font-size: 1.8em;
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer {
+  position: absolute;
+  bottom: 3vh;
+}
