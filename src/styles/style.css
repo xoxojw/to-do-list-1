@@ -2,11 +2,6 @@
 @import "variable.css";
 @import "fonts.css";
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -22,8 +17,8 @@ main {
   max-width: 120vh;
   min-width: 80vh;
   min-height: 60vh;
-
-  border-radius: 30px;
+  margin: 2vh auto;
+  border-radius: 20px;
   background-color: rgba(166, 182, 194, 0.15);
   backdrop-filter: blur(10px);
   box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.2);
@@ -47,13 +42,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3vh;
-  gap: 5px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  gap: 1vh;
 }
 
 .add-todo input {
-  width: 20vh;
+  width: 22vh;
   height: 3vh;
+  padding: 0.5vh;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -62,12 +59,12 @@ main {
 
 .add-todo button {
   width: 7vh;
-  height: 3.2vh;
+  height: 3.5vh;
   border: none;
   border-radius: 10px;
   outline: none;
   cursor: pointer;
-  margin-left: 1vh;
+  margin-left: 0.5vh;
   background-color: palevioletred;
   font-family: 'Pretendard-Regular';
   transition: all 0.2s ease-in-out;
@@ -77,17 +74,74 @@ main {
   scale: 1.1;
 }
 
-.list-title {
-  display: block;
-  font-size: 1.8em;
+.list-container {
+  display: inline-block;
 }
 
-.list-container {
+.list-title {
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+
+.list-working, .list-done {
+  padding: 1em 2em 1em 2em;
+}
+
+.list-wrapper{
   display: flex;
   flex-wrap: wrap;
+  gap: 12px;
+  padding: 1em;
+}
+
+.todo-container {
+  width: 30vh;
+  border: 3px solid salmon;
+  border-radius: 12px;
+  padding: 1.3em;
+  position: relative;
+}
+
+.todo-text {
+  display: inline-block;
+  margin-bottom: 5vh;
+}
+
+.todo-container h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+  padding-bottom: 1em;
+  color: #d69891;
+}
+
+.todo-buttons-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 10px;
+  padding: 1em;
+}
+
+.todo-buttons-container button {
+  border: none;
+  width: 10em;
+  height: 3em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.todo-delete-button {
+  background-color: #c19898;
+}
+
+.todo-complete-button {
+  background-color: #a1aed3;
 }
 
 footer {
-  position: absolute;
-  bottom: 3vh;
+  padding: 1vh;
 }
