@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-const AddTodo = () => {
+const AddTodo = ({todos, setTodos}) => {
   const initialState = { id: 0, title: "", detail: "", isDone: false };
-  const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState(initialState);
   
   const onChangeHandler = (event) => {
